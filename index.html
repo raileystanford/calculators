@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Калькуляторы</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../index.css">
+   <link rel="shortcut icon" href="../calculator.svg">
+</head>
+<body>
+   
+
+
+
+   <div class="main">
+
+      <div class="item">
+
+         <div class="opener">
+            <img src="../calculator.svg" alt="calculator_icon" class="opener__image">
+            <span class="opener__name">Расчет кофе</span>
+         </div>
+
+         <div class="calculator">
+
+            <div class="calculator__header">
+               <span class="calculator__name">РАСЧЕТ КОФЕ</span>
+               <button class="calculator__close">
+                  <img src="close-icon.png" alt="close" class="calculator__close-icon">
+               </button>
+            </div>
+
+            <div class="calculator__inner">
+
+               <div class="calculator__inputs">
+
+                  <div class="calculator__section">
+
+                     <div class="calculator__section-inner">
+
+                        <div class="input-item">
+                           <label for="" class="input-item__label">Вода с кофе</label>
+                           <div class="input__item-wrapper">
+                              <input type="number" class="input-item__input" id="water">
+                              <select class="input-item__select" id="water__unit">
+                                 <option value="liter" selected>ЛИТР</option>
+                                 <option value="mililiter">MИЛЛИЛИТР</option>
+                              </select>
+                           </div>
+                        </div>
+
+                        <div class="input-item">
+                           <label for="" class="input-item__label">Чисто кофе</label>
+                           <div class="input__item-wrapper">
+                              <input type="number" class="input-item__input" id="coffee">
+                              <select class="input-item__select" id="coffee__unit">
+                                 <option value="kilo" selected>КИЛОГРАММ</option>
+                                 <option value="gram">ГРАММ</option>
+                              </select>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <button class="calculator__change" id="changeBtn">Из "Вода с кофе" в "Чисто кофе"</button>
+
+                  </div>
+
+                  <div class="settings" id="calc1__setings">
+
+                     <span class="settings__title">Формула</span>
+
+                     <div class="settings__body">
+
+                        <div class="settings__variant">
+
+                           <div class="settings__wrapper">
+                              <input type="radio" name="settings" id="formula__checkbox1" checked>
+                              <label for="formula__checkbox1" class="settings__label">Текущая формула</label>
+                           </div>
+
+                           <div class="settings__wrapper2">
+
+                              <span class="settings__text">В</span>
+
+                              <div class="input__item-wrapper">
+                                 <input type="number" class="input-item__input" id="calc1__waterStandart" readonly>
+                                 <select class="input-item__select" disabled>
+                                    <option value="mililiter">МИЛЛИЛИТР</option>
+                                 </select>
+                              </div>
+
+                              <span class="settings__text">воды</span>
+
+                              <div class="input__item-wrapper">
+                                 <input type="number" class="input-item__input" id="calc1__coffeeStandart" readonly>
+                                 <select class="input-item__select" disabled>
+                                    <option value="gram">ГРАММ</option>
+                                 </select>
+                              </div>
+
+                              <span class="settings__text">кофе</span>
+
+                           </div>
+
+                        </div>
+
+                        <div class="settings__variant">
+
+                           <div class="settings__wrapper">
+                              <input type="radio" name="settings" id="formula__checkbox2">
+                              <label for="formula__checkbox2" class="settings__label">Новая формула</label>
+                           </div>
+
+                           <div class="settings__wrapper2">
+
+                              <span class="settings__text">В</span>
+
+                              <div class="input__item-wrapper">
+                                 <input type="number" class="input-item__input" id="calc1__newWaterStandart" disabled>
+                                 <select class="input-item__select" disabled>
+                                    <option value="mililiter">МИЛЛИЛИТР</option>
+                                 </select>
+                              </div>
+
+                              <span class="settings__text">воды</span>
+
+                              <div class="input__item-wrapper">
+                                 <input type="number" class="input-item__input" id="calc1__newCoffeeStandart" disabled>
+                                 <select class="input-item__select" disabled>
+                                    <option value="liter">ГРАММ</option>
+                                 </select>
+                              </div>
+
+                              <span class="settings__text">кофе</span>
+
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                     <button class="settings__save" id="calc1__updateBtn" disabled>СОХРАНИТЬ</button>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="item item2">
+
+         <div class="opener">
+            <img src="../calculator.svg" alt="calculator_icon" class="opener__image">
+            <span class="opener__name">Расчет зарплаты</span>
+         </div>
+
+         <div class="calculator">
+
+            <div class="calculator__header">
+               <span class="calculator__name">РАСЧЕТ ЗАРПЛАТЫ</span>
+               <button class="calculator__close">
+                  <img src="close-icon.png" alt="close" class="calculator__close-icon">
+               </button>
+            </div>
+
+            <table class="tableS">
+
+               <tr class="tableS__row">
+                  <th class="tableS__h-cell">ФИО</th>
+                  <th class="tableS__h-cell">Должность</th>
+                  <th class="tableS__h-cell">Тип начисления</th>
+                  <th class="tableS__h-cell">Кол-во дней (сам)</th>
+                  <th class="tableS__h-cell">Кол-во дней (совместно)</th>
+                  <th class="tableS__h-cell">Кол-во кальяна</th>
+                  <th class="tableS__h-cell">Ставка</th>
+                  <th class="tableS__h-cell">Итого</th>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Кулик Татьяна<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">бармен</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Варвянская Ольга<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">бармен</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Котов Сергей<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">кальянщик</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Рак Зинаида<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">повар</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Титарева Виктория<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">повар</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">Савельева Зинаида<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">хозяюшка</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+               <tr class="tableS__row">
+                  <td class="tableS__cell tableS__cell_name">T. Валя<button class="calc3__removeEButton"><img src="close-icon.png" class="adscf" alt=""></button></td>
+                  <td class="tableS__cell cell">хозяюшка</td>
+                  <td class="tableS__cell cell">
+                     <button class="tableS__button">Установить</button>
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+                  <td class="tableS__cell cell">
+                     <input type="text" class="tableS__input">
+                  </td>
+               </tr>
+
+            </table>
+
+            <div class="wrappper">
+               <button class="button" id="changeParams__calc2">Изменить параметры</button>
+               <button class="button" id="addEmployee__calc2">Добавить сотрудника</button>
+               <button class="button" id="removeEmployee__calc2">Удалить сотрудника</button>
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+   <div class="popup" id="calc2__popup">
+
+      <span class="popup__title">Установить тип начисления зарплаты</span>
+
+      <select id="" class="popup__select">
+         <option value="normal">Обычный</option>
+         <option value="together">Совместная работа</option>
+         <option value="kalSold">Продажа кальянов</option>
+      </select>
+
+      <div class="popup__wrapper">
+         <div class="popup__wrap">
+            <label for="days" class="popup__label">Кол-во дней</label>
+            <input type="number" id="days" class="popup__input">
+         </div>
+         <div class="popup__wrap">
+            <label for="calc2__price" class="popup__label">Cтавка</label>
+            <input type="number" id="calc2__price" class="popup__input">
+         </div>
+         <div class="popup__wrap">
+            <label for="daysTogether" class="popup__label">Кол-во совместных дней</label>
+            <input type="number" id="daysTogether" class="popup__input">
+         </div>
+         <div class="popup__wrap">
+            <label for="kalSell" class="popup__label">Кол-во проданых кальянов</label>
+            <input type="number" id="kalSell" class="popup__input">
+         </div>
+      </div>
+
+      <div class="popup__btns">
+         <button class="popup__btn" id="popupConfirm" disabled>Установить</button>
+         <button class="popup__btn" id="popupCancel">Oтмена</button>
+      </div>
+
+   </div>
+
+   <div class="popup2" id="popup2__calc2">
+
+      <span class="popup2__title">Изменение параметров</span>
+
+      <div class="popup2__body">
+
+         <div class="popup2__item">
+            <span class="popup2__text">Текущие значения параметров</span>
+            <div class="popup2__inputs">
+               <div class="popup2__wrap">
+                  <label for="popup2__powar-old" class="popup2__label">Ставка поваров (совместная):</label>
+                  <input type="number" class="popup2__input" id="popup2__powar-old" readonly>
+               </div>
+               <div class="popup2__wrap">
+                  <label for="popup2__kal-old" class="popup2__label">Доплата за 1 кальян:</label>
+                  <input type="number" class="popup2__input" id="popup2__kal-old" readonly>
+               </div>
+            </div>
+         </div>
+
+         <div class="popup2__item">
+            <span class="popup2__text">Задать новые значаения параметров</span>
+            <div class="popup2__inputs">
+               <div class="popup2__wrap">
+                  <label for="popup2__powar" class="popup2__label">Ставка поваров (совместная):</label>
+                  <input type="number" class="popup2__input" id="popup2__powar">
+               </div>
+               <div class="popup2__wrap">
+                  <label for="popup2__kal" class="popup2__label">Доплата за 1 кальян:</label>
+                  <input type="number" class="popup2__input" id="popup2__kal">
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="popup2__btns">
+         <button class="popup2__btn" id="popup2__change">Изменить</button>
+         <button class="popup2__btn" id="popup2__cancel">Отмена</button>
+      </div>
+
+   </div>
+
+   <div class="popup3" id="calc2__popup3">
+      <span class="popup3__title">Добавление нового сотрудника</span>
+      <div class="popup3__wrap">
+         <div class="popup3__item">
+            <label for="" class="popup3__label">ФИО</label>
+            <input type="text" class="popup3__input popup3__fio">
+         </div>
+         <div class="popup3__item">
+            <label for="" class="popup3__label">Должность</label>
+            <input type="text" class="popup3__input popup3__work">
+         </div>
+      </div>
+      <div class="popup3__btns">
+         <button class="popup3__btn" id="popup3__ok" disabled>Добавить</button>
+         <button class="popup3__btn" id="popup3__cancel">Отмена</button>
+      </div>
+   </div>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="../index.js"></script>
+
+</body>
+</html>
